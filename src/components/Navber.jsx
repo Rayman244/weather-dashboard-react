@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import MyLocation from "../scripts/location.js";
+// import MyLocation from "../scripts/location.js";
 
 class Navbar extends Component {
-  constructor(props) {
-    super(props);
-    // MyLocation.getLocation();
-  }
+//   constructor(props) {
+//     super(props);
+//     // MyLocation.getLocation();
+//   }
   state = {};
   render() {
     return (
