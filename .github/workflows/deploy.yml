@@ -23,6 +23,9 @@ jobs:
         with:
           node-version: "18.16.1"
 
+      - name: Setup git credential manager
+        run: git config --global credential.helper wincred
+
       - name: Setup git email
         run: git config --global user.email "rayhewitt244@gmail.com"
       - name: Setup git name
@@ -39,7 +42,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # - name: Deploy with gh-pages
-      #   run: |
-      #     git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-      #     npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+      - name: Deploy with gh-pages
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        #     npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
