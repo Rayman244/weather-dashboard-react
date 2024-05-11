@@ -37,10 +37,10 @@ jobs:
       - name: Build
         run: npm run predeploy
 
-      - name: Deploy with gh-pages
-        run: npm run deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Deploy with gh-pages
+      #   run: npm run deploy
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy with gh-pages
         run: |
