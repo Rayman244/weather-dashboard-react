@@ -12,7 +12,7 @@ class Navbar extends Component {
       <nav>
         <h1>Weather Dashboard</h1>
         <div>
-          <Link to="/">Home</Link>
+          {/* <Link to="/">Home</Link> */}
         </div>
       </nav>
     );
