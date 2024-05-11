@@ -21,7 +21,7 @@ jobs:
       - name: Setup git email
         run: git config --global user.email "rayhewitt244@gmail.com"
       - name: Setup git name
-        run: git config --global user.name "Rayman244"
+        run: git config --global user.name "rayman244"
 
       - name: Install dependencies
         run: npm install
