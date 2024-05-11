@@ -24,27 +24,30 @@ jobs:
           node-version: "18.16.1"
 
       - name: Setup git credential manager
-        run: git config --global credential.helper wincred
+        run: echo ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup git email
-        run: git config --global user.email "rayhewitt244@gmail.com"
-      - name: Setup git name
-        run: git config --global user.name "Rayman244"
+      # - name: Setup git credential manager
+      #   run: git config --global credential.helper wincred
 
-      - name: Install dependencies
-        run: npm install
+      # - name: Setup git email
+      #   run: git config --global user.email "rayhewitt244@gmail.com"
+      # - name: Setup git name
+      #   run: git config --global user.name "Rayman244"
 
-      - name: Build
-        run: npm run predeploy
+      # - name: Install dependencies
+      #   run: npm install
+
+      # - name: Build
+      #   run: npm run predeploy
 
       # - name: Deploy with gh-pages
       #   run: npm run deploy
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Deploy with gh-pages
-        run: |
-          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-        #     npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Deploy with gh-pages
+      #   run: |
+      #     git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+      #     npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+      # env:
+      # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
